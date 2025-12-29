@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi & LKPD Pecahan</title>
+<style>
+body{margin:0;font-family:Poppins;background:#e0aec5}
+.container{padding:70px}
+h1{color:#23394f}
+.box{background:#ebe2e2;padding:25px;border-radius:20px;margin-top:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.back{position:fixed;top:30px;right:60px;padding:12px 20px;border:none;border-radius:14px;background:#311e5f;color:#fff;font-weight:800}
+</style>
+</head>
+
+<body>
+<button class="back" onclick="window.location.href='SUB MENU PECAHAN.html'">kembali</button>
+<div class="container">
+<h1>LKPD 1 (Perkalian Pecahan)</h1>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: "Comic Sans MS", sans-serif;
+background: linear-gradient(135deg, #431be2, #e1f5fe);
+padding: 40px;
+color: #222;
+}
+h1 {
+text-align: center;
+background-color: #2d2b48;
+padding: 15px 25px;
+border-radius: 15px;
+color: #f2f9f2;
+width: fit-content;
+margin: 0 auto 30px auto;
+box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.card {
+background: #ffffff;
+border-radius: 20px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+padding: 25px;
+max-width: 950px;
+margin: 0 auto;
+}
+.soal {
+background-color: #fffde7;
+border-radius: 12px;
+padding: 15px 20px;
+margin-bottom: 18px;
+font-size: 1.2em;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.fraction {
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+margin: 0 4px;
+}
+.fraction .top {display:block;font-weight:bold}
+.fraction .line {border-bottom:1px solid #000;width:25px;margin:0 auto}
+.fraction .bottom {display:block;margin-top:2px;font-weight:bold}
+.jawaban-box {
+background-color:#e3f2fd;border:2px solid #90caf9;border-radius:10px;
+padding:10px;width:130px;display:flex;justify-content:center;align-items:center;
+box-shadow:inset 0 2px 6px rgba(0,0,0,0.1)
+}
+.fraction-input{display:flex;flex-direction:column;align-items:center}
+.fraction-input input{width:50px;height:28px;text-align:center;border:none;background:none;font-size:1.1em;outline:none}
+.fraction-input .garis{width:50px;border-bottom:1px solid #000}
+button{background-color:#322f45;border:none;padding:10px 20px;border-radius:10px;color:white;font-weight:bold;cursor:pointer}
+.hasil{text-align:center;margin-top:25px;font-size:1.3em;color:#1b5e20;font-weight:bold}
+.benar{background-color:#c8e6c9!important;border-color:#388e3c!important}
+.salah{background-color:#ffcdd2!important;border-color:#c62828!important}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <p>Jangan sederhanakan terlebih dahulu!</p>
+  <!-- Soal 1 -->
+  <div class="soal">
+    <div>● 
+      <span class="fraction">
+        <span class="top">1</span><div class="line"></div><span class="bottom">5</span>
+      </span>
+      ×
+      <span class="fraction">
+        <span class="top">1</span><div class="line"></div><span class="bottom">2</span>
+      </span>
+      =
+    </div>
+    <div class="jawaban-box" id="box1">
+      <div class="fraction-input">
+        <input type="number" id="num1">
+        <div class="garis"></div>
+        <input type="number" id="den1">
+      </div>
+    </div>
+  </div>
+
+  <!-- Soal 2 -->
+  <div class="soal">
+    <div>● 
+      <span class="fraction">
+        <span class="top">2</span><div class="line"></div><span class="bottom">6</span>
+      </span>
+      ×
+      <span class="fraction">
+        <span class="top">3</span><div class="line"></div><span class="bottom">2</span>
+      </span>
+      =
+    </div>
+    <div class="jawaban-box" id="box2">
+      <div class="fraction-input">
+        <input type="number" id="num2">
+        <div class="garis"></div>
+        <input type="number" id="den2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Soal 3 -->
+  <div class="soal">
+    <div>●
+      2
+      <span class="fraction">
+        <span class="top">6</span><div class="line"></div><span class="bottom">7</span>
+      </span>
+      ×
+      1
+      <span class="fraction">
+        <span class="top">4</span><div class="line"></div><span class="bottom">6</span>
+      </span>
+      =
+    </div>
+    <div class="jawaban-box" id="box3">
+      <div class="fraction-input">
+        <input type="number" id="num3">
+        <div class="garis"></div>
+        <input type="number" id="den3">
+      </div>
+    </div>
+  </div>
+
+  <!-- Soal 4 -->
+  <div class="soal">
+    <div>●
+      4
+      <span class="fraction">
+        <span class="top">3</span><div class="line"></div><span class="bottom">4</span>
+      </span>
+      ×
+      1
+      <span class="fraction">
+        <span class="top">8</span><div class="line"></div><span class="bottom">9</span>
+      </span>
+      =
+    </div>
+    <div class="jawaban-box" id="box4">
+      <div class="fraction-input">
+        <input type="number" id="num4">
+        <div class="garis"></div>
+        <input type="number" id="den4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Soal 5 -->
+  <div class="soal">
+    <div>● 
+      5
+      <span class="fraction">
+        <span class="top">1</span><div class="line"></div><span class="bottom">9</span>
+      </span>
+      ×
+      2
+      <span class="fraction">
+        <span class="top">4</span><div class="line"></div><span class="bottom">5</span>
+      </span>
+      =
+    </div>
+    <div class="jawaban-box" id="box5">
+      <div class="fraction-input">
+        <input type="number" id="num5">
+        <div class="garis"></div>
+        <input type="number" id="den5">
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:25px;">
+    <button onclick="cekJawaban()">Periksa Jawaban</button>
+  </div>
+
+  <div class="hasil" id="hasil"></div>
+</div>
+
+<script>
+function cekJawaban() {
+  const kunci = [
+    { n: 1, d: 10 },
+    { n: 6, d: 12 },
+    { n: 200, d: 42 },
+    { n: 1, d: 1 },
+    { n: 21, d: 2 }
+  ];
+
+  let skor = 0;
+  let pembetulan = "";
+
+  for (let i = 1; i <= 5; i++) {
+    const num = document.getElementById(`num${i}`).value;
+    const den = document.getElementById(`den${i}`).value;
+    const box = document.getElementById(`box${i}`);
+
+    if (parseInt(num) === kunci[i - 1].n && parseInt(den) === kunci[i - 1].d) {
+      skor++;
+      box.classList.add("benar");
+      box.classList.remove("salah");
+    } else {
+      box.classList.add("salah");
+      box.classList.remove("benar");
+      pembetulan += `❌ Soal ${i}: Jawaban benar adalah ${kunci[i - 1].n} per ${kunci[i - 1].d}<br>`;
+    }
+  }
+
+  let hasilText = `✅ Skor kamu: ${skor}/5<br>`;
+  if (pembetulan) hasilText += `<br>${pembetulan}`;
+  document.getElementById("hasil").innerHTML = hasilText;
+}
+</script>
+</body>
+</html>

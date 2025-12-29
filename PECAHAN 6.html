@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apakah Kalian Tau?</title>
+<style>
+body{margin:0;font-family:Poppins;background:#e0aec5}
+.container{padding:70px}
+h1{color:#23394f}
+.box{background:#ebe2e2;padding:25px;border-radius:20px;margin-top:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.back{position:fixed;top:30px;right:60px;padding:12px 20px;border:none;border-radius:14px;background:#311e5f;color:#fff;font-weight:800}
+</style>
+</head>
+<body>
+<button class="back" onclick="window.location.href='SUB MENU PECAHAN.html'">kembali</button>
+<div class="container">
+<h1>Apakah Kalian Tau?</h1>
+
+<div class="box">
+  <style>
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      background: linear-gradient(135deg, #fff9c4, #e1f5fe);
+      padding: 40px;
+      color: #222;
+    }
+
+    h3 {
+      text-align: center;
+      background-color: #a5d6a7;
+      padding: 15px 25px;
+      border-radius: 15px;
+      color: #1b5e20;
+      width: fit-content;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 25px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .soal {
+      background-color: #fffde7;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      font-size: 1.1em;
+    }
+
+    .jawaban-box {
+      background-color: #e3f2fd;
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 10px;
+      width: 130px;
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .fraction-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .fraction-input input {
+      width: 50px;
+      height: 28px;
+      text-align: center;
+      border: none;
+      background: none;
+      font-size: 1.1em;
+      outline: none;
+    }
+
+    .fraction-input .garis {
+      width: 50px;
+      border-bottom: 1px solid #000;
+    }
+
+    button {
+      background-color: #81c784;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      margin: 20px auto;
+    }
+
+    button:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
+    }
+
+    .hasil {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 1.3em;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+
+    .benar {
+      background-color: #c8e6c9 !important;
+      border-color: #388e3c !important;
+    }
+
+    .salah {
+      background-color: #ffcdd2 !important;
+      border-color: #c62828 !important;
+    }
+
+    .warna-perintah {
+      color: red;
+      font-weight: bold;
+    }
+
+    .judul-hijau {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+
+  <div class="card">
+    <p class="warna-perintah">(Isilah kolom jawaban sesuai hasil perhitunganmu, lalu klik tombol “Periksa Jawaban” untuk melihat skor!)</p>
+
+    <!-- Soal 1 -->
+ <style>
+  .soal {
+    margin-bottom: 25px;
+    background: #f9f9ff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .pecahan {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .pecahan .atas {
+    display: block;
+  }
+
+  .pecahan .garis {
+    border-top: 2px solid #000;
+    margin: 1px 0;
+  }
+
+  .pecahan .bawah {
+    display: block;
+  }
+
+  .fraction-input {
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .fraction-input input {
+    width: 35px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .fraction-input .garis {
+    border-top: 2px solid #000;
+    margin: 2px 0;
+  }
+
+  button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .hasil {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+</style>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pecahan dengan Garis Tengah</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f7ff;
+    padding: 20px;
+  }
+
+  .soal {
+    margin-bottom: 25px;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+
+  /* ======= Bentuk Pecahan ======= */
+  .pecahan {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .pecahan .atas {
+    display: block;
+    font-size: 16px;
+  }
+
+  .pecahan .garis {
+    border-top: 2px solid #000;
+    width: 25px;
+    margin: 2px auto;
+  }
+
+  .pecahan .bawah {
+    display: block;
+    font-size: 16px;
+  }
+
+  /* ======= Input Jawaban Pecahan ======= */
+  .fraction-input {
+    display: inline-block;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  .fraction-input input {
+    width: 35px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .fraction-input .garis {
+    border-top: 2px solid #000;
+    margin: 3px 0;
+  }
+
+  button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #5848c2;
+  }
+
+  .hasil {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<div class="soal">
+  <p>
+    1. Ibu mempunyai sebuah tali panjangnya 2 
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis">-</span>
+      <span class="bawah">2</span>
+    </span> meter. 
+    Setiap kali akan dipotong, panjang potongan pertama adalah 
+    <span class="pecahan">
+      <span class="atas">2</span>
+      <span class="garis">-</span>
+      <span class="bawah">5</span>
+    </span> 
+    dari seluruh panjang tali. Berapakah sisa tali yang belum terpotong?
+  </p>
+
+  <div class="jawaban-box" id="box1">
+    <div class="fraction-input">
+      <input type="number" id="jawab1_top">
+      <div class="garis"></div>
+      <input type="number" id="jawab1_bottom">
+    </div>
+  </div>
+</div>
+
+<div class="soal">
+  <p>
+    2. Sebuah tangki air berisi 6 
+    <span class="pecahan">
+      <span class="atas">2</span>
+      <span class="garis">-</span>
+      <span class="bawah">3</span>
+    </span> 
+    liter air. Air itu digunakan untuk menyiram tanaman, setiap tanaman membutuhkan 
+    <span class="pecahan">
+      <span class="atas">2</span>
+      <span class="garis">-</span>
+      <span class="bawah">3</span>
+    </span> 
+    liter air. Sebelum digunakan, air dalam tangki dicampur dengan pupuk cair sebanyak 1 
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis">-</span>
+      <span class="bawah">2</span>
+    </span> 
+    kali volume air semula. Setelah dicampur, berapa banyak tanaman yang bisa disiram seluruhnya?
+  </p>
+
+  <div class="jawaban-box" id="box2">
+    <div class="fraction-input">
+      <input type="number" id="jawab2_top">
+      <div class="garis"></div>
+      <input type="number" id="jawab2_bottom">
+    </div>
+  </div>
+</div>
+
+<div class="soal">
+  <p>
+    3. Dalam sebuah resep kue bolu, setiap adonan membutuhkan 
+    <span class="pecahan">
+      <span class="atas">2</span>
+      <span class="garis">-</span>
+      <span class="bawah">3</span>
+    </span> 
+    gelas gula dan menghasilkan 
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis">-</span>
+      <span class="bawah">2</span>
+    </span> 
+    loyang kue. Jika seseorang ingin membuat 3 loyang kue, berapa gelas gula yang harus disiapkan?
+  </p>
+
+  <div class="jawaban-box" id="box3">
+    <div class="fraction-input">
+      <input type="number" id="jawab3_top">
+      <div class="garis"></div>
+      <input type="number" id="jawab3_bottom">
+    </div>
+  </div>
+</div>
+
+<button onclick="cekJawabanLKPD3()">Periksa Jawaban</button>
+<div class="hasil" id="hasil3"></div>
+
+  <script>
+    function cekJawabanLKPD3() {
+      let skor = 0;
+
+      // Jawaban benar
+      // Soal 1 = 2/5
+      // Soal 2 = 20/3
+      // Soal 3 = 4/3
+
+      const kunci = [
+        { atas: 2, bawah: 5 },
+        { atas: 20, bawah: 3 },
+        { atas: 4, bawah: 3 }
+      ];
+
+      for (let i = 1; i <= 3; i++) {
+        const top = parseInt(document.getElementById(`jawab${i}_top`).value);
+        const bottom = parseInt(document.getElementById(`jawab${i}_bottom`).value);
+        const box = document.getElementById(`box${i}`);
+
+        if (top === kunci[i - 1].atas && bottom === kunci[i - 1].bawah) {
+          skor++;
+          box.classList.add("benar");
+          box.classList.remove("salah");
+        } else {
+          box.classList.add("salah");
+          box.classList.remove("benar");
+        }
+      }
+
+      const hasil = document.getElementById("hasil3");
+      hasil.innerHTML = "Skor Anda: " + skor + "/3<br>";
+
+      if (skor === 3) {
+        hasil.innerHTML += "<span style='color:green;'>Hebat! Semua jawaban benar 🎉</span>";
+      } else {
+        hasil.innerHTML += "<span style='color:red;'>Masih ada yang salah, coba lagi ya!</span>";
+      }
+    }
+  </script>

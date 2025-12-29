@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu LKPD Pecahan</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:linear-gradient(135deg,#e0aec5,#c9d6ff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.menu{
+  background:#ffffff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+.menu h1{
+  margin-bottom:30px;
+  color:#23394f;
+}
+
+button{
+  display:block;
+  width:220px;
+  margin:15px auto;
+  padding:15px;
+  font-size:16px;
+  font-weight:bold;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+  background:#311e5f;
+  color:white;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#66bb6a;
+  transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+  <h1>Menu LKPD Pecahan</h1>
+<a href="PECAHAN 4.html">
+  <button onclick="showSection('PECAHAN 4')">LKPD 1</button>
+</a>
+
+<a href="PECAHAN 5.html">
+ <button onclick="showSection('PECAHAN 5.html')">LKPD 2</button>
+ </a>
+
+ <a href="PECAHAN 6.html">
+  <button onclick="showSection('Pecahan 6')">LKPD 3</button>
+  </a>
+
+  <a href="4 tombol.html">
+      <button class="hero-btn btn-bilangan" onclick="showApp('pecahan')">KEMBALI</button>
+      </a>
+</div>
+
+</body>
+</html>

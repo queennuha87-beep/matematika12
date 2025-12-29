@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apakah Kalian Tau?</title>
+<style>
+body{margin:0;font-family:Poppins;background:#eec7d8}
+.container{padding:70px}
+h1{color:#23394f}
+.box{background:#faf6f6;padding:25px;border-radius:20px;margin-top:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.back{position:fixed;top:30px;right:60px;padding:12px 20px;border:none;border-radius:14px;background:#311e5f;color:#fff;font-weight:800}
+</style>
+</head>
+<body>
+<button class="back" onclick="location.href='SUB MENU GEOMETRI.html'">← KEMBALI</button>
+<div class="container">
+<h1>Apakah Kalian Tau?</h1>
+
+<div class="box">
+      <h3>LKPD 1</h3>
+  <div class="blank-space"></div>
+
+  <!-- Petunjuk Pengerjaan -->
+  <div class="petunjuk" style="background-color:#e6e0ff; padding:15px; border-radius:10px; margin-bottom:15px;">
+    <h4>Petunjuk Mengerjakan:</h4>
+    <ul>
+      <li>Amati gambar dengan teliti pada setiap soal.</li>
+      <li>Hitunglah <b>luas gabungan bangun ruang kubus dan balok</b> sesuai petunjuk pada gambar.</li>
+      <li>Bagian yang <span style="color:purple; font-weight:bold;">diwarnai ungu</span> menunjukkan sisi yang <b>terbuka</b>.</li>
+      <li>Tulis hasil akhirmu di kolom jawaban yang disediakan.</li>
+      <li>Tekan tombol <b>Periksa Jawaban</b> untuk melihat skor dan pembetulan.</li>
+    </ul>
+  </div>
+
+  <!-- SOAL 1 -->
+  <p><b>SOAL 1</b></p>
+  <center>
+  <img src="lkpd_1-removebg-preview.png" height="200px" width="500px"><br>
+  </center>
+  <label>Jawabanmu:</label><br>
+  <textarea id="jawaban1" rows="3" cols="60" placeholder="Tuliskan hasil akhir luas gabungan kubus dan balok"></textarea>
+  
+  <!-- SOAL 2 -->
+  <p><b>SOAL 2</b></p>
+  <center>
+  <img src="lkpd_2-removebg-preview.png" height="250px" width="400px"><br>
+  </center>
+  <label>Jawabanmu:</label><br>
+  <textarea id="jawaban2" rows="3" cols="60" placeholder="Tuliskan hasil akhir luas gabungan kubus dan balok"></textarea>
+
+  <!-- SOAL 3 -->
+  <p><b>SOAL 3</b></p>
+  <center>
+  <img src="lkpd_3-removebg-preview.png" height="250px" width="350px"><br>
+  </center>
+
+
+  <label>Jawabanmu:</label><br>
+  <textarea id="jawaban3" rows="3" cols="60" placeholder="Tuliskan hasil akhir luas gabungan kubus dan balok"></textarea>
+
+  <!-- Tombol Periksa dan Skor -->
+  <button onclick="periksaJawabanLKPD1()" style="background-color:#9370db; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer;">
+    Periksa Jawaban
+  </button>
+
+  <div id="hasil-lkpd1" style="margin-top:20px; background-color:#f8f8ff; padding:15px; border-radius:10px;">
+    <h4>Hasil dan Skor:</h4>
+    <p id="skor-lkpd1">Belum diperiksa.</p>
+  </div>
+</section>
+
+<script>
+  function periksaJawabanLKPD1() {
+    // Kunci Jawaban Sederhana (bisa disesuaikan)
+    const kunci = [
+      "luas permukaan gabungan kubus dan balok",
+      "sisi terbuka berwarna ungu",
+      "menjumlahkan seluruh luas sisi yang tampak"
+    ];
+
+    let benar = 0;
+    for (let i = 1; i <= 3; i++) {
+      let jawaban = document.getElementById("jawaban" + i).value.toLowerCase();
+      if (jawaban.includes(kunci[i - 1])) {
+        benar++;
+      }
+    }
+
+    let skor = (benar / 3) * 100;
+    let hasil = document.getElementById("skor-lkpd1");
+    hasil.innerHTML = `
+      Jumlah Benar: ${benar} dari 3 soal<br>
+      Skor Akhir: <b>${skor}</b>
+    `;
+
+    if (skor === 100) {
+      hasil.innerHTML += "<br><span style='color:green; font-weight:bold;'>Luar biasa! Semua jawaban benar!</span>";
+    } else if (skor >= 60) {
+      hasil.innerHTML += "<br><span style='color:orange;'>Bagus, tetapi masih perlu perbaikan.</span>";
+    } else {
+      hasil.innerHTML += "<br><span style='color:red;'>Ayo coba lagi, pelajari kembali langkah mencari luas gabungan kubus dan balok.</span>";
+    }
+  }
+</script>

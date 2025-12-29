@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOAL EVALUASI PECAHAN</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f5d1c0;
+    margin: 30px;
+    color: #222;
+  }
+  h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 5px;
+  }
+  h3 {
+    text-align: center;
+    color: #00509e;
+    font-weight: normal;
+    margin-bottom: 25px;
+  }
+  .petunjuk {
+    background: #e3f2fd;
+    border-left: 5px solid #1976d2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .soal {
+    background: #f5f0e3;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    line-height: 1.7;
+  }
+  .pecahan {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 5px;
+  }
+  .garis {
+    border-top: 2px solid #000;
+    width: 28px;
+    margin: 2px auto;
+  }
+  .operator {
+    margin: 0 8px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  input[type="number"] {
+    width: 35px;
+    text-align: center;
+    font-size: 14px;
+  }
+  button {
+    display: block;
+    margin: 35px auto;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+  #skorAkhir {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3em;
+    color: #006400;
+    margin-top: 25px;
+  }
+  .benar {
+    background-color: #c8e6c9 !important;
+    border-color: #388e3c !important;
+  }
+  .salah {
+    background-color: #ffcdd2 !important;
+    border-color: #c62828 !important;
+  }
+
+  /* Soal Cerita */
+  .cerita {
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .jawaban-box {
+    background-color: #e3f2fd;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 130px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .fraction-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .fraction-input input {
+    width: 50px;
+    height: 28px;
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 1.1em;
+    outline: none;
+  }
+  .fraction-input .garis {
+    width: 50px;
+    border-bottom: 1px solid #000;
+  }
+  .box{background:#f3edd9;padding:25px;border-radius:20px;margin-top:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.back{position:fixed;top:30px;right:60px;padding:12px 20px;border:none;border-radius:14px;background:#311e5f;color:#fff;font-weight:800}
+</style>
+</head>
+<button class="back" onclick="location.href='SUB MENU EVALUASI.html'">← KEMBALI</button>
+<body>
+
+<h1>SOAL EVALUASI PECAHAN</h1>
+
+<div class="petunjuk">
+  <b>Petunjuk Pengerjaan:</b>
+  <ul>
+    <li>Isilah kolom yang tersedia dengan hasil operasi pecahan yang benar.</li>
+    <li>Gunakan angka pembilang (atas) dan penyebut (bawah) pada tempatnya.</li>
+    <li>Setelah semua soal diisi, tekan tombol <b>"Periksa Jawaban"</b> untuk melihat hasilnya.</li>
+    <li>Warna <span style="color:green;font-weight:bold;">hijau</span> berarti benar, dan <span style="color:red;font-weight:bold;">merah</span> berarti salah.</li>
+  </ul>
+</div>
+
+<!-- Soal 1–4 -->
+<div class="soal"><b>●</b> 
+<span class="pecahan"><div>6</div><div class="garis"></div><div>7</div></span>
+<span class="operator">×</span>
+<span class="pecahan"><div>3</div><div class="garis"></div><div>4</div></span>
+=
+<span class="pecahan"><input type="number" id="n1"><div class="garis"></div><input type="number" id="d1"></span>
+</div>
+
+<div class="soal"><b>●</b>
+<span class="pecahan"><div>5</div><div class="garis"></div><div>11</div></span>
+<span class="operator">×</span>
+<span class="pecahan"><div>6</div><div class="garis"></div><div>8</div></span>
+=
+<span class="pecahan"><input type="number" id="n2"><div class="garis"></div><input type="number" id="d2"></span>
+</div>
+
+<div class="soal"><b>●</b> 2
+<span class="pecahan"><div>3</div><div class="garis"></div><div>4</div></span>
+<span class="operator">×</span> 1
+<span class="pecahan"><div>11</div><div class="garis"></div><div>3</div></span> 
+=
+  <span class="pecahan"><input type="number" id="n5a"><div class="garis"></div><input type="number" id="d5a"></span>
+  <span class="operator">x</span>
+  <span class="pecahan"><input type="number" id="n5b"><div class="garis"></div><input type="number" id="d5b"></span>
+  <span class="operator">=</span>
+  <span class="pecahan"><input type="number" id="n5"><div class="garis"></div><input type="number" id="d5"></span>
+</div>
+
+
+<div class="soal"><b>●</b> 5
+<span class="pecahan"><div>3</div><div class="garis"></div><div>4</div></span>
+<span class="operator">×</span> 1
+<span class="pecahan"><div>4</div><div class="garis"></div><div>7</div></span>
+=
+  <span class="pecahan"><input type="number" id="n5a"><div class="garis"></div><input type="number" id="d5a"></span>
+  <span class="operator">x</span>
+  <span class="pecahan"><input type="number" id="n5b"><div class="garis"></div><input type="number" id="d5b"></span>
+  <span class="operator">=</span>
+  <span class="pecahan"><input type="number" id="n5"><div class="garis"></div><input type="number" id="d5"></span>
+</div>
+
+<!-- Soal 5–8 -->
+<div class="soal">
+  <b>●</b>
+  <span class="pecahan"><div>3</div><div class="garis"></div><div>4</div></span>
+<span class="operator">÷</span>
+<span class="pecahan"><div>4</div><div class="garis"></div><div>7</div></span>
+= 
+  <span class="pecahan"><input type="number" id="n5a"><div class="garis"></div><input type="number" id="d5a"></span>
+  <span class="operator">x</span>
+  <span class="pecahan"><input type="number" id="n5b"><div class="garis"></div><input type="number" id="d5b"></span>
+  <span class="operator">=</span>
+  <span class="pecahan"><input type="number" id="n5"><div class="garis"></div><input type="number" id="d5"></span>
+</div>
+
+<div class="soal">
+  <b>●</b> 
+    <span class="pecahan"><div>4</div><div class="garis"></div><div>13</div></span>
+<span class="operator">÷</span>
+<span class="pecahan"><div>1</div><div class="garis"></div><div>8</div></span>
+= 
+  <span class="pecahan"><input type="number" id="n6a"><div class="garis"></div><input type="number" id="d6a"></span>
+  <span class="operator">x</span>
+  <span class="pecahan"><input type="number" id="n6b"><div class="garis"></div><input type="number" id="d6b"></span>
+  <span class="operator">=</span>
+  <span class="pecahan"><input type="number" id="n6"><div class="garis"></div><input type="number" id="d6"></span>
+</div>
+
+<div class="soal">
+  <b>●</b>3
+  <span class="pecahan"><div>1</div><div class="garis"></div><div>6</div></span>
+<span class="operator">÷</span>5
+<span class="pecahan"><div>3</div><div class="garis"></div><div>4</div></span>
+= 
+  <span class="pecahan"><input type="number" id="n7a"><div class="garis"></div><input type="number" id="d7a"></span>
+  <span class="operator">×</span>
+  <span class="pecahan"><input type="number" id="n7b"><div class="garis"></div><input type="number" id="d7b"></span>
+  <span class="operator">=</span>
+  <span class="pecahan"><input type="number" id="n7"><div class="garis"></div><input type="number" id="d7"></span>
+</div>
+
+<div class="soal">
+  <b>●</b>6
+   <span class="pecahan"><div>2</div><div class="garis"></div><div>3</div></span>
+<span class="operator">÷</span>2
+<span class="pecahan"><div>3</div><div class="garis"></div><div>5</div></span>
+=
+  <span class="pecahan"><input type="number" id="n8a"><div class="garis"></div><input type="number" id="d8a"></span>
+  <span class="operator">x</span>
+  <span class="pecahan"><input type="number" id="n8b"><div class="garis"></div><input type="number" id="d8b"></span>
+  <span class="operator">=</span>
+  <span class="pecahan"><input type="number" id="n8"><div class="garis"></div><input type="number" id="d8"></span>
+</div>
+
+<!-- Soal Cerita -->
+<div class="cerita">
+  <b>9.</b> Sebuah toko kue menggunakan <span class="pecahan"><div>3</div><div class="garis"></div><div>4</div></span> kg gula untuk membuat satu adonan kue.  
+  <br>Pada hari Minggu, toko tersebut hanya membuat <span class="pecahan"><div>2</div><div class="garis"></div><div>3</div></span> bagian dari jumlah adonan biasanya karena bahan terbatas.  
+  <br><b>Berapakah kg gula yang digunakan toko kue pada hari Minggu?</b>
+
+  <div class="jawaban-box" id="box9">
+    <div class="fraction-input">
+      <input type="number" id="jawab9_top">
+      <div class="garis"></div>
+      <input type="number" id="jawab9_bottom">
+    </div>
+  </div>
+</div>
+
+<div class="cerita">
+  <b>10.</b> Doni bersepeda sejauh  <span class="pecahan"><div>5</div><div class="garis"></div><div>6</div></span> kilometer.  
+  <br>Setiap kali ia berhenti beristirahat, ia sudah menempuh  <span class="pecahan"><div>1</div><div class="garis"></div><div>12</div></span> kilometer.  
+  <br><b>Berapakah kali Doni berhenti selama perjalanan tersebut?</b>
+
+  <div class="jawaban-box" id="box10">
+    <input type="number" id="jawab10" placeholder="jumlah kali">
+  </div>
+</div>
+
+<button onclick="cekJawaban()">Periksa Jawaban</button>
+<div id="skorAkhir"></div>
+
+<<script>
+function cekJawaban() {
+  let skor = 0;
+  const nilaiPerSoal = 10;
+
+  const kunci = {
+    1:{n:18,d:28},
+    2:{n:30,d:88},
+    3:{n:33,d:12},
+    4:{n:12,d:28},
+    5:{n:5,d:2},
+    6:{n:3,d:10},
+    7:{n:3,d:14},
+    8:{n:5,d:4},
+    9:{n:1,d:2},
+    10:10
+  };
+
+  /* ===== SOAL 1–8 ===== */
+  for (let i = 1; i <= 8; i++) {
+    const n = document.getElementById("n"+i);
+    const d = document.getElementById("d"+i);
+
+    if (!n || !d) continue;
+
+    const pembilang = parseInt(n.value);
+    const penyebut = parseInt(d.value);
+
+    const box = n.closest(".soal");
+    box.classList.remove("benar","salah");
+
+    if (pembilang === kunci[i].n && penyebut === kunci[i].d) {
+      skor += nilaiPerSoal;
+      box.classList.add("benar");
+    } else {
+      box.classList.add("salah");
+    }
+  }
+
+  /* ===== SOAL 9 (CERITA PECAHAN) ===== */
+  const n9 = parseInt(document.getElementById("jawab9_top").value);
+  const d9 = parseInt(document.getElementById("jawab9_bottom").value);
+  const box9 = document.getElementById("box9");
+
+  box9.classList.remove("benar","salah");
+
+  if (n9 === kunci[9].n && d9 === kunci[9].d) {
+    skor += nilaiPerSoal;
+    box9.classList.add("benar");
+  } else {
+    box9.classList.add("salah");
+  }
+
+  /* ===== SOAL 10 (CERITA BILANGAN) ===== */
+  const j10 = parseInt(document.getElementById("jawab10").value);
+  const box10 = document.getElementById("box10");
+
+  box10.classList.remove("benar","salah");
+
+  if (j10 === kunci[10]) {
+    skor += nilaiPerSoal;
+    box10.classList.add("benar");
+  } else {
+    box10.classList.add("salah");
+  }
+
+  /* ===== TAMPILKAN SKOR ===== */
+  const hasil = document.getElementById("skorAkhir");
+  hasil.innerHTML = `
+    Skor Anda: <b>${skor} / 100</b><br>
+    <small>Setiap soal bernilai 10</small>
+  `;
+
+  if (skor === 100) {
+    hasil.innerHTML += "<br><span style='color:green;'>🎉 Luar biasa! Semua jawaban benar</span>";
+  } else {
+    hasil.innerHTML += "<br><span style='color:red;'>Masih ada jawaban yang salah, coba periksa kembali</span>";
+  }
+}
+</script>

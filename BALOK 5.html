@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apakah Kalian Tau?</title>
+<style>
+body{margin:0;font-family:Poppins;background:#e0c5b8}
+.container{padding:70px}
+h1{color:#23394f}
+.box{background:#e4cce2;padding:25px;border-radius:20px;margin-top:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.back{position:fixed;top:30px;right:60px;padding:12px 20px;border:none;border-radius:14px;background:#311e5f;color:#fff;font-weight:800}
+</style>
+</head>
+<body>
+<button class="back" onclick="location.href='SUB MENU GEOMETRI.html'">← KEMBALI</button>
+<div class="container">
+<h1>Perhatikan soal cerita diabawah ini, amati dengan teliti dan pecahkan masalah dalam cerita</h1>
+
+<div class="box">
+       <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LKPD Soal 1–3 — Luas Gabungan</title>
+<style>
+  :root{
+    --bg:#e8f4ff;
+    --card-1:#dceeff; /* biru muda */
+    --card-2:#f0eaff; /* ungu muda */
+    --card-3:#e8fff0; /* hijau muda */
+    --accent:#004b8d;
+    --muted:#6b788e;
+  }
+  body{
+    margin:0;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    background:var(--bg);
+    color:#222;
+    padding:28px;
+  }
+  h1{
+    text-align:center;
+    color:var(--accent);
+    margin:0 0 22px;
+    font-size:24px;
+    font-weight:700;
+  }
+
+  .wrap{ max-width:920px; margin:18px auto; display:flex; flex-direction:column; gap:18px; }
+
+  .blok{
+    display:flex;
+    gap:12px;
+    align-items:stretch;
+    flex-wrap:nowrap;
+  }
+
+  /* each soal column vertical stacking */
+  .soal-card{
+    flex:1 1 0;
+    border-radius:12px;
+    padding:16px;
+    box-shadow:0 6px 18px rgba(12,35,64,0.06);
+    min-width:260px;
+  }
+
+  /* warna per card */
+  .soal-card.s1{ background:var(--card-1); }
+  .soal-card.s2{ background:var(--card-2); }
+  .soal-card.s3{ background:var(--card-3); }
+
+  .nomor{
+    display:inline-block;
+    background:rgba(0,75,141,0.12);
+    color:var(--accent);
+    font-weight:700;
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:14px;
+  }
+
+  .soal-text{
+    margin-top:12px;
+    background:rgba(255,255,255,0.75);
+    padding:12px;
+    border-radius:8px;
+    font-size:14px;
+    line-height:1.6;
+    color:#243042;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+
+  /* bawah soal: jawaban, tombol, skor */
+  .jawaban-box{ margin-top:14px; display:flex; flex-direction:column; gap:10px; align-items:stretch; }
+
+  input.answer {
+    width:100%;
+    padding:10px 12px;
+    font-size:14px;
+    border-radius:8px;
+    border:1.5px solid rgba(0,75,141,0.18);
+    text-align:center;
+    box-sizing:border-box;
+  }
+
+  button.check {
+    background:var(--accent);
+    color:#fff;
+    border:0;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:14px;
+  }
+  button.check:hover{ background:#003a72; }
+
+  .skor-box{
+    margin-top:8px;
+    background:rgba(255,255,255,0.9);
+    border-radius:8px;
+    padding:8px;
+    text-align:center;
+    font-weight:700;
+    color:var(--muted);
+    font-size:14px;
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .skor-ok{ color:green; }
+  .skor-wrong{ color:#b00000; }
+
+  /* responsiveness: grid layout (mendatar lalu kebawah) */
+  @media (min-width:920px){
+    .wrap{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    h1{ margin-bottom:12px; }
+  }
+  @media (max-width:919px){
+    .wrap{ display:flex; flex-direction:column; }
+  }
+
+  /* total area */
+  .total {
+    max-width:920px;
+    margin: 18px auto 60px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    align-items:center;
+  }
+  .total button{
+    background:#0074e4;color:#fff;border:0;padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer;
+  }
+  .total .out{ font-weight:700;color:var(--accent); margin-left:10px; font-size:15px; }
+</style>
+</head>
+<body>
+
+<!-- tiga soal mendatar (akan wrap ke baris bawah di layar kecil) -->
+<div class="wrap">
+  <!-- Soal 1 -->
+  <div class="soal-card s1" id="card1">
+    <div class="nomor">Soal 1</div>
+    <div class="soal-text" aria-labelledby="card1">
+      Dani ingin membuat kotak pensil terbuka berbentuk balok, dan di sampingnya ia menempelkan kotak kecil tertutup berbentuk kubus untuk tempat penghapus. Panjang seluruh bangun 27 cm.<br><br>
+      Ukuran kotak pensil balok:<br>
+      1. Panjang = 20 cm<br>
+      2. Lebar = 10 cm<br>
+      3. Tinggi = 8 cm<br><br>
+      Jika seluruh permukaan kedua kotak tersebut akan dilapisi kertas warna biru, berapa luas kertas yang dibutuhkan seluruhnya? (jawaban dalam cm²)
+    </div>
+
+    <div class="jawaban-box">
+      <input class="answer" id="a1" type="number" placeholder="Masukkan jawaban (cm²)">
+      <button class="check" onclick="checkAnswer(1,994)">Periksa Jawaban</button>
+      <div class="skor-box" id="r1">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 2 -->
+  <div class="soal-card s2" id="card2">
+    <div class="nomor">Soal 2</div>
+    <div class="soal-text">
+      Ayah membuat almari untuk menyimpan mainan yang terdiri dari dua bagian. Bagian atas berbentuk balok berukuran panjang 24 cm, lebar 7 cm, dan tinggi 9 cm. Di sampingnya ditempel kubus dengan rusuk 11 cm sebagai tempat tambahan. Kemudian ayah ingin menutup kedua bagian tersebut dengan satu lembar kaca besar. Berapa luas kaca seluruhnya yang dibutuhkan? (jawaban dalam cm²)
+    </div>
+
+    <div class="jawaban-box">
+      <input class="answer" id="a2" type="number" placeholder="Masukkan jawaban (cm²)">
+      <button class="check" onclick="checkAnswer(2,239)">Periksa Jawaban</button>
+      <div class="skor-box" id="r2">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 3 -->
+  <div class="soal-card s3" id="card3">
+    <div class="nomor">Soal 3</div>
+    <div class="soal-text">
+      Sebuah balok memiliki ukuran panjang 48 cm, lebar 12 cm, dan tinggi 12 cm. Pak Budi menempelkan sebuah kubus di samping balok sehingga satu sisi kubus menempel penuh pada sisi samping balok. Panjang sisi kubus sama dengan lebar balok yaitu 12 cm. Berapakah luas gabungan dari kubus dan balok tersebut? (jawaban dalam cm²)
+    </div>
+
+    <div class="jawaban-box">
+      <input class="answer" id="a3" type="number" placeholder="Masukkan jawaban (cm²)">
+      <button class="check" onclick="checkAnswer(3,2304)">Periksa Jawaban</button>
+      <div class="skor-box" id="r3">Skor: 0</div>
+    </div>
+  </div>
+</div>
+
+<!-- total skor area (maks 99) -->
+<div class="total">
+  <button onclick="calcTotal()">Hitung Total Skor</button>
+  <div class="out" id="totalOut">Total Skor: 0 / 99</div>
+</div>
+
+<script>
+  // kunci jawaban dan poin per soal (33 each => total 99)
+  const KEY = {1:994, 2:239, 3:2304};
+  const PTS = 33;
+
+  function checkAnswer(no, correct){
+    const val = document.getElementById('a'+no).value.trim();
+    const out = document.getElementById('r'+no);
+    if(val === ''){
+      out.innerHTML = '⚠️ Jawaban belum diisi.';
+      out.className = 'skor-box';
+      return;
+    }
+    // treat numeric equivalence (allow "994" or "994.0")
+    const num = Number(val);
+    if(!isFinite(num)) {
+      out.innerHTML = '❌ Masukkan angka yang valid.';
+      out.className = 'skor-box skor-wrong';
+      return;
+    }
+    if(num === correct){
+      out.innerHTML = '✅ Jawaban benar — Skor: ' + PTS;
+      out.className = 'skor-box skor-ok';
+    } else {
+      out.innerHTML = '❌ Jawaban belum tepat. Pembetulan: ' + correct + ' cm²';
+      out.className = 'skor-box skor-wrong';
+    }
+  }
+
+  function calcTotal(){
+    let total = 0;
+    for(let i=1;i<=3;i++){
+      const out = document.getElementById('r'+i).innerText;
+      if(out.includes('Skor:')){
+        const m = out.match(/Skor:\s*(\d+)/);
+        if(m) total += Number(m[1]);
+      }
+    }
+    document.getElementById('totalOut').innerText = 'Total Skor: ' + total + ' / 99';
+  }
+</script>
+
+</body>
+</html>

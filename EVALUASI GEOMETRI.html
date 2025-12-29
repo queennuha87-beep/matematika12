@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluasi Luas Gabungan Kubus dan Balok</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #eef3ff, #ffffff);
+    margin: 0;
+    padding: 15px;
+    line-height: 1.4;
+  }
+
+  h1 {
+    text-align: center;
+    color: #003366;
+    font-size: 28px;
+    margin: 20px 0 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .petunjuk {
+    background: #fff3cd;
+    border: 2px dashed #ffb703;
+    padding: 18px;
+    border-radius: 15px;
+    max-width: 750px;
+    width: 95%;
+  }
+
+  .petunjuk h4 {
+    margin-top: 0;
+    color: #b45309;
+  }
+
+  .blok-soal {
+    width: 95%;
+    max-width: 720px;
+  }
+
+  .kotak {
+    background: #ffffff;
+    border: 2px solid #cfd9ff;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+    padding: 18px 22px;
+    margin-bottom: 10px;
+  }
+
+  .nomor {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004aad;
+    margin-bottom: 10px;
+  }
+
+  .teks-soal {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  textarea {
+    width: 100%;
+    height: 90px;
+    border-radius: 12px;
+    border: 2px solid #90caf9;
+    font-size: 15px;
+    padding: 12px;
+    resize: none;
+    box-sizing: border-box;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+  }
+
+  button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  button:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+  }
+
+  .hasil {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .benar { color: #16a34a; font-weight: 600; }
+  .salah { color: #dc2626; font-weight: 600; }
+
+  .skor {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 6px;
+  }
+
+  .total {
+    text-align: center;
+    margin: 50px 0 30px;
+  }
+
+  .total button {
+    background: #22c55e;
+    font-size: 18px;
+    padding: 12px 28px;
+  }
+
+  #nilaiAkhir {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #065f46;
+  }  .box{background:#f3edd9;padding:25px;border-radius:20px;margin-top:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.back{position:fixed;top:30px;right:60px;padding:12px 20px;border:none;border-radius:14px;background:#311e5f;color:#fff;font-weight:800}
+</style>
+</head>
+<button class="back" onclick="location.href='SUB MENU EVALUASI.html'">← KEMBALI</button>
+<body>
+</style>
+</head>
+
+<body>
+
+<section id="kubus-6" style="display:block">
+
+<div class="container">
+
+  <div class="petunjuk">
+    <h4>Petunjuk Mengerjakan:</h4>
+    <ul>
+      <li>Amati gambar dengan teliti pada setiap soal.</li>
+      <li>Hitunglah <b>luas gabungan bangun ruang kubus dan balok</b> sesuai petunjuk pada gambar.</li>
+      <li>Bagian yang <span style="color:purple; font-weight:bold;">diwarnai ungu</span> menunjukkan sisi yang <b>terbuka</b>.</li>
+      <li>Tulis hasil akhirmu di kolom jawaban yang disediakan.</li>
+      <li>Tekan tombol <b>Periksa Jawaban</b> untuk melihat skor dan pembetulan.</li>
+    </ul>
+  </div>
+
+  <h1>Evaluasi Luas Gabungan Kubus dan Balok</h1>
+
+  <!-- Soal 1 -->
+  <div class="nomor">
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 1</div>
+      <img src="eval 1.png" height="320px" width="250px"><br>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban1" placeholder="Tulis hasil akhirnya di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(1, '264')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil1"></div>
+      <div class="skor" id="skor1">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 2 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 2</div>
+      <img src="eval 2.png" height="300px" width="320px"><br>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban2" placeholder="Tulis hasil akhirnya di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(2, '350')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil2"></div>
+      <div class="skor" id="skor2">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 3 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 3</div>
+      <img src="eval 3.png" height="200px" width="340px"><br>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban3" placeholder="Tulis hasil akhirnya di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(3, '432')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil3"></div>
+      <div class="skor" id="skor3">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 4 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 4</div>
+      <img src="eval 4.png" height="350px" width="340px"><br>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban4" placeholder="Tulis hasil akhirnya di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(4, '504')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil4"></div>
+      <div class="skor" id="skor4">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 5 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 5</div>
+      <img src="eval 5.png" height="250px" width="350px"><br>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban5" placeholder="Tulis hasil akhirnya di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(5, '580')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil5"></div>
+      <div class="skor" id="skor5">Skor: 0</div>
+    </div>
+  </div>
+
+
+  <!-- ====== SOAL 6–10 (kode asli kamu, tetap utuh) ====== -->
+
+  <!-- Soal 6 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 6</div>
+      <div class="teks-soal">
+        Sebuah kotak berbentuk balok memiliki panjang 8 cm, lebar 5 cm, dan tinggi 3 cm.
+        Di atas balok tersebut diletakkan sebuah kubus dengan panjang sisi 3 cm.
+        Berapakah luas permukaan gabungan balok dan kubus?
+      </div>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban6" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(6, '173')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil6"></div>
+      <div class="skor" id="skor6">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 7 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 7</div>
+      <div class="teks-soal">
+        Sebuah balok dengan panjang sisi 6 cm disampingnya ditempel sebuah balok terbuka
+        yang memiliki panjang 10 cm, lebar 6 cm, dan tinggi 4 cm.
+        Hitunglah luas permukaan gabungan dari dua bangun tersebut!
+      </div>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban7" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(7, '404')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil7"></div>
+      <div class="skor" id="skor7">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 8 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 8</div>
+      <div class="teks-soal">
+        Sebuah balok memiliki panjang 15 cm, lebar 8 cm, dan tinggi 6 cm.
+        Di atas balok tersebut diletakkan sebuah kubus dengan panjang sisi 5 cm.
+        Jika kamu ingin mengecat seluruh permukaan bangun gabungan (kecuali bagian tutup kubus),
+        berapakah luas cat yang diperlukan?
+      </div>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban8" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(8, '998')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil8"></div>
+      <div class="skor" id="skor8">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 9 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 9</div>
+      <div class="teks-soal">
+        Sebuah kubus dengan panjang sisi 7 cm ditempelkan pada balok yang memiliki panjang 12 cm,
+        lebar 7 cm, dan tinggi 5 cm.
+        Tentukan luas permukaan gabungan yang harus ditutup agar efisien dalam penggunaan bahan!
+      </div>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban9" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(9, '133')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil9"></div>
+      <div class="skor" id="skor9">Skor: 0</div>
+    </div>
+  </div>
+
+  <!-- Soal 10 -->
+  <div class="blok-soal">
+    <div class="kotak">
+      <div class="nomor">Soal 10</div>
+      <div class="teks-soal">
+        Gabungkan sebuah balok dengan ukuran panjang 20 cm, lebar 10 cm, dan tinggi 8 cm
+        dengan sebuah kubus yang sisi-sisinya 10 cm.
+        Tentukan luas permukaan gabungan bangun ruang tersebut!
+      </div>
+    </div>
+    <div class="kotak">
+      <textarea id="jawaban10" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+    <div class="kotak" style="text-align:center;">
+      <button onclick="cekJawaban(10, '1240')">Periksa Jawaban</button>
+    </div>
+    <div class="kotak">
+      <div class="hasil" id="hasil10"></div>
+      <div class="skor" id="skor10">Skor: 0</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="total">
+  <button onclick="hitungTotal()">Hitung Total Skor</button>
+  <div id="nilaiAkhir"></div>
+</div>
+
+<script>
+function cekJawaban(n, kunci) {
+  let isi = document.getElementById("jawaban" + n).value.trim();
+  let hasil = document.getElementById("hasil" + n);
+  let skor = document.getElementById("skor" + n);
+
+  if (isi === "") {
+    hasil.innerHTML = "<span class='salah'>⚠️ Jawaban belum diisi.</span>";
+    skor.innerHTML = "Skor: 0";
+    return;
+  }
+
+  if (isi === kunci) {
+    hasil.innerHTML = "<span class='benar'>✅ Jawaban benar!</span>";
+    skor.innerHTML = "Skor: 10";
+  } else {
+    hasil.innerHTML = "<span class='salah'>❌ Jawaban salah. Pembetulan: " + kunci + " cm²</span>";
+    skor.innerHTML = "Skor: 0";
+  }
+}
+
+function hitungTotal() {
+  let total = 0;
+  for (let i = 1; i <= 10; i++) {
+    let teks = document.getElementById("skor" + i).innerText;
+    let nilai = parseInt(teks.replace("Skor: ", "")) || 0;
+    total += nilai;
+  }
+  document.getElementById("nilaiAkhir").innerHTML = "🎉 Total Skor: " + total + " / 100";
+}
+</script>
+
+</section>
+</body>
+</html>

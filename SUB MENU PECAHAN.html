@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menu Pecahan – Kelas 6</title>
+
+<style>
+:root{
+  --merah-tua:#9b1f2b;
+  --pink:#ff6fa3;
+  --pink-tua:#d43d6e;
+  --biru:#1e90ff;
+  --biru-tua:#003f7f;
+  --kuning:#ffd54f;
+  font-family:"Poppins",sans-serif;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fff9fb,#f7fbff);
+}
+
+/* ===== HALAMAN PECAHAN ===== */
+.pecahan{
+  min-height:100vh;
+  padding:70px;
+  box-sizing:border-box;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+.header h1{
+  font-size:42px;
+  color:var(--biru-tua);
+  margin:0;
+}
+
+.back-btn{
+  padding:14px 22px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(90deg,var(--pink),var(--pink-tua));
+  color:white;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.subtitle{
+  font-size:20px;
+  color:#333;
+  margin-bottom:50px;
+  max-width:700px;
+}
+
+/* ===== GRID MENU ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  min-height:150px;
+  border-radius:22px;
+  padding:28px;
+  box-sizing:border-box;
+  color:white;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+.card span{
+  font-size:32px;
+  font-weight:900;
+}
+
+.card b{
+  font-size:18px;
+}
+
+/* WARNA CARD */
+.c1{background:linear-gradient(135deg,var(--biru),var(--pink))}
+.c2{background:linear-gradient(135deg,#4facfe,#00f2fe)}
+.c3{background:linear-gradient(135deg,#43e97b,#38f9d7)}
+.c4{background:linear-gradient(135deg,#fa709a,#fee140)}
+.c5{background:linear-gradient(135deg,#667eea,#764ba2)}
+.c6{background:linear-gradient(135deg,#f7971e,#ffd200)}
+
+@media(max-width:768px){
+  .pecahan{padding:40px 20px}
+  .header h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<section class="pecahan">
+
+  <div class="header">
+    <h1>📘 Menu Pecahan</h1>
+    <button class="back-btn" onclick="location.href='beranda.html'">← Beranda</button>
+  </div>
+
+  <p class="subtitle">
+    Pilih sub materi pecahan berikut untuk mempelajari konsep, contoh,
+    dan latihan secara bertahap.
+  </p>
+
+  <div class="grid">
+    <div class="card c1" onclick="location.href='PECAHAN 1.html'">
+      <span>1</span>
+      <b>Apakah Kalian Tau?</b>
+      <small>Pemantik</small>
+    </div>
+
+    <div class="card c2" onclick="location.href='PECAHAN 2.html'">
+      <span>2</span>
+      <b>Perkalian Pecahan</b>
+      <small>Cara Menghitung Perkalian Pecahan</small>
+    </div>
+
+    <div class="card c3" onclick="location.href='PECAHAN 3.html'">
+      <span>3</span>
+      <b>Pembagian Pecahan</b>
+      <small>Cara Menghitung Pembagian Pecahan</small>
+    </div>
+
+    <div class="card c4" onclick="location.href='PECAHAN 4.html'">
+      <span>4</span>
+      <b>LKPD 1</b>
+      <small>Latihan Soal Perkalian Pecahan</small>
+    </div>
+
+    <div class="card c5" onclick="location.href='PECAHAN 5.html'">
+      <span>5</span>
+      <b>LKPD 2</b>
+      <small>Latihan Soal Pembagian Pecahan</small>
+    </div>
+
+    <div class="card c6" onclick="location.href='PECAHAN 6.html'">
+      <span>6</span>
+      <b>LKPD 3</b>
+      <small>Soal Cerita Pecahan</small>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
